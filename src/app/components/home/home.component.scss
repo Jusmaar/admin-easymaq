@@ -3,6 +3,9 @@
 .dash{
   margin-left: 23%;
   padding-top: 20px;
+  @media screen and (min-width:1200px){
+    margin-left:19%;
+  }
   @media screen and (max-width:1024px){
     margin-left:0;
   }
@@ -136,6 +139,11 @@
     padding: 10px 20px 0 20px;
     background:white;
     box-shadow:$border-shadow-bread;
+    .list-unstyled{
+      @media screen and (max-width:576px){
+        font-size: 12px;
+      }
+    }
     h3{
       color:$primary-text-color;
     }
