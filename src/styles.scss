@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+    padding:0px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/****************Paleta****************/
+$primary-color-dark     : #455A64;
+$primary-color          : #607D8B;
+$primary-color-light    : #CFD8DC;
+$primary-color-text     : #FFFFFF;
+$accent-color           : #FF5722;
+$primary-text-color     : #212121;
+$secondary-text-color   : #757575;
+$divider-color          : #BDBDBD;
+$fondos                 : #F2F2F2;
+/*************Border-Shadow**********************/
+$border-shadow-bread:0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 2px 0px -2px rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+$border-shadow-hover:0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+
+
+
+app-login{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-image: -webkit-linear-gradient(315deg, transparent 45%,rgba(255,87,34, .4) 45%);
+    @media screen and (max-width:768px){
+      background-image: -webkit-linear-gradient(340deg, transparent 45%,rgba(255,87,34, .3) 45%);
+    }
+}
+
+input:focus{
+    border-color:$accent-color;
+}
+
+/*Material*/
+.full-width{
+	width: 100%;
+}
+$color-easymaq: #FF5722;
+.mat-focused{
+	.mat-input-placeholder{
+		color: $color-easymaq !important;
+	}
+}
+.mat-input-placeholder{
+	&.mat-focused{
+		color: $color-easymaq !important;
+	}
+}
+.mat-input-underline{
+	.mat-input-ripple{
+		background: $color-easymaq;
+		&.mat-focused{
+			color: $color-easymaq;
+		}
+	}
+}
