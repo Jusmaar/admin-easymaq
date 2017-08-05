@@ -1,20 +1,28 @@
 @import "../../../styles";
 
 .dash{
-  margin-left: 23%;
-  padding-top: 20px;
-  @media screen and (min-width:1200px){
-    margin-left:19%;
-  }
+  // margin-left: 23%;
+  // padding-top: 20px;
+  // @media screen and (min-width:1200px){
+  //   margin-left:19%;
+  // }
+  // @media screen and (max-width:1024px){
+  //   margin-left:0;
+  // }
+  // @media screen and (max-width:768px){
+  //   margin-left:20px;
+  // }
+  // @media screen and (max-width:576px){
+  //   margin-left:0px;
+  position:relative;
+  left:19%;
+  width: 81%;
+  margin-top:10px;
   @media screen and (max-width:1024px){
-    margin-left:0;
-  }
-  @media screen and (max-width:768px){
-    margin-left:20px;
-  }
-  @media screen and (max-width:576px){
-    margin-left:0px;
-  }
+  //   margin-left:0;
+    width: 100%;
+    left: 0;
+   }
   .plan-datos{
     background-image: url(../../../assets/img/plan.png);
     background-size:cover;

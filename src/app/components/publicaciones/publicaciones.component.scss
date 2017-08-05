@@ -1,0 +1,27 @@
+@import "../../../styles";
+.dash{
+	position:relative;
+  	left:19%;
+ 	width: 81%;
+  	margin-top:10px;
+  	@media screen and (max-width:1024px){
+	    width: 100%;
+	    left: 0;
+   }
+   .table td, .table th{
+   		vertical-align: middle;
+   }
+   .page-item.active .page-link{
+   		color: white;
+   		background: $accent-color;
+   		border:$accent-color;
+   }
+   .page-link{
+   		color: black;
+   		&:focus, &:hover{
+   		color: white;
+   		background: $accent-color;
+   		}
+   }
+   
+}

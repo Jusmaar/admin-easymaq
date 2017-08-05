@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MdSelectModule} from '@angular/material';
 import { MdInputModule } from '@angular/material';
+import {MdCheckboxModule} from '@angular/material';
 import { ChartsModule } from 'ng2-charts';
+
 import {APP_ROUTING} from './app.routes';
 
 import { AppComponent } from './app.component';
@@ -24,6 +27,8 @@ import { PublicacionesComponent } from './components/publicaciones/publicaciones
     BrowserAnimationsModule,
     MdInputModule,
     ChartsModule,
+    MdSelectModule,
+    MdCheckboxModule,
     APP_ROUTING
   ],
   providers: [],

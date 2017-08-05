@@ -47,6 +47,11 @@ input:focus{
 	width: 100%;
 }
 $color-easymaq: #FF5722;
+.full-width{
+	width: 100%;
+}
+
+$color-easymaq: #FF5722;
 .mat-focused{
 	.mat-input-placeholder{
 		color: $color-easymaq !important;
@@ -64,4 +69,60 @@ $color-easymaq: #FF5722;
 			color: $color-easymaq;
 		}
 	}
+} 
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb{
+    background-color:$accent-color; 
+}
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar{
+    background-color:  rgba(255, 87, 34, 0.8)
+}
+.swiper-pagination-bullet-active{
+	background: $color-easymaq !important;
+}
+.mat-select:focus:not(.mat-select-disabled).mat-primary .mat-select-underline{
+    background: $color-easymaq !important;
+}
+.mat-select:focus:not(.mat-select-disabled) .mat-select-trigger{
+	color: $color-easymaq !important;
+}
+.mat-select:focus:not(.mat-select-disabled) .mat-select-underline{
+	background: $color-easymaq !important;
+}
+
+.mat-select:focus:not(.mat-select-disabled) .mat-select-arrow{
+	color: $color-easymaq !important;
+}
+.mat-select{
+	width:100% !important;
+	@media screen and (max-width:768px){
+		margin: 20px 0;
+	}
+}
+.mat-option.mat-selected{
+	color: $color-easymaq !important;
+	width:100% !important;
+}
+.mat-option.mat-selected.mat-primary, .mat-primary .mat-option.mat-selected{
+    color:$accent-color !important;
+}
+.mat-radio-checked .mat-radio-outer-circle{
+	border-color: $color-easymaq !important; 
+}
+
+.mat-radio-inner-circle{
+	background: $color-easymaq;
+}
+
+.mat-input-infix{
+	width: 600px;
+}
+
+.mat-input-underline{
+	width: 600px;
+}
+
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, 
+.mat-checkbox-checked.mat-accent .mat-checkbox-background{
+	background-color: $color-easymaq;
 }
