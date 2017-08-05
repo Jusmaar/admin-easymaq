@@ -4,6 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdSelectModule} from '@angular/material';
 import { MdInputModule } from '@angular/material';
 import {MdCheckboxModule} from '@angular/material';
+import {MdRadioModule} from '@angular/material';
 import { ChartsModule } from 'ng2-charts';
 
 import {APP_ROUTING} from './app.routes';
@@ -13,6 +14,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { PublicacionesComponent } from './components/publicaciones/publicaciones.component';
+import { EstadisticaComponent } from './components/estadistica/estadistica.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { PublicacionesComponent } from './components/publicaciones/publicaciones
     LoginComponent,
     HomeComponent,
     NavComponent,
-    PublicacionesComponent
+    PublicacionesComponent,
+    EstadisticaComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { PublicacionesComponent } from './components/publicaciones/publicaciones
     ChartsModule,
     MdSelectModule,
     MdCheckboxModule,
+    MdRadioModule,
     APP_ROUTING
   ],
   providers: [],

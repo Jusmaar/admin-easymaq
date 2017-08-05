@@ -147,6 +147,10 @@
     padding: 10px 20px 0 20px;
     background:white;
     box-shadow:$border-shadow-bread;
+    .coment-content2{
+      box-shadow: $border-shadow-bread;
+      // border: 1px solid black;
+    }
     .list-unstyled{
       @media screen and (max-width:576px){
         font-size: 12px;

@@ -3,14 +3,17 @@
 
 .head-logo{
     width: 100%;
-    background: rgba(0, 0, 0, 0.05);
+    background:$primary-color-dark;
     box-shadow: $border-shadow-bread;
     padding: 10px 20px;
+    height: 60px;
+    z-index: 2;
     @media screen and (max-width:768px){
         margin-bottom: 30px;
     }
     .image{
         img{
+            height: 45px;
             @media screen and (max-width:768px){
                 width: 150px;
             }
@@ -28,6 +31,7 @@
     background: $fondos;
     padding: 20px 50px;
     border-radius: 6px;
+    z-index: 2;
     @media screen and (max-width:768px){
         width: 80%;
     }

@@ -2,13 +2,14 @@ import {RouterModule,Routes} from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { PublicacionesComponent } from './components/publicaciones/publicaciones.component'; 
-
+import { EstadisticaComponent } from './components/estadistica/estadistica.component';
 
 
 const APP_ROUTES:Routes = [
-    { path:'login', component: LoginComponent},
-    { path:'home', component : HomeComponent},
-    { path:'publicaciones', component:PublicacionesComponent},
+    { path:'login', component: LoginComponent },
+    { path:'home', component : HomeComponent },
+    { path:'publicaciones', component : PublicacionesComponent },
+    { path:'estadistica' , component: EstadisticaComponent },
     { path:'**', pathMatch:'full', redirectTo:'home' }
 ];
 

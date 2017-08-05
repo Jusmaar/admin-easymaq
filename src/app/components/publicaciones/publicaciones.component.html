@@ -1,8 +1,17 @@
 <app-nav></app-nav>
 <div class="dash">
 	<div class="container-fluid">
-		<h1>Gestiona tus publicaciones</h1>
-		<div class="row">
+		<div class="row d-flex align-items-center">
+			<div class="col-10">
+				<h1>Gestiona tus publicaciones</h1>
+			</div>
+			<div class="col-2 d-flex justify-content-end">
+				<button class="btn-plus" type="button"><i class="fa fa-plus"></i>
+</button>
+			</div>
+		</div>
+		
+		<div class="row filtros-container">
 			<div class="col-6 col-md-3">
 				<md-select placeholder="Tiempo">
 				  <md-option *ngFor="let tiempo of fechas" [value]="fechas">
@@ -45,7 +54,7 @@
 				      <th>Tipo</th>
 				      <th>Estadisticas</th>
 				      <th>Activo</th>
-				      <th>Otros</th>
+				      <th>Detalles</th>
 				    </tr>
 				  </thead>
 				  <tbody>
@@ -55,9 +64,9 @@
 				      <td>Otto</td>
 				      <td>@mdo</td>
 				      <td>Otto</td>
-				      <td>Mark</td>
+				      <td><a href="">Ver</a></td>
 				      <td><md-checkbox></md-checkbox></td>
-				      <td>@mdo</td>
+				      <td><a href="">Ver más</a></td>
 				    </tr>
 				    <tr>
 				      <th><img src="assets/img/maq2.jpg"></th>
@@ -65,9 +74,9 @@
 				      <td>Thornton</td>
 				      <td>@fat</td>
 				      <td>@fat</td>
-				      <td>Jacob</td>
+				      <td><a href="">Ver</a></td>
 				      <td><md-checkbox></md-checkbox></td>
-				      <td>@fat</td>
+				      <td><a href="">Ver más</a></td>
 				    </tr>
 				    <tr>
 				      <th><img src="assets/img/maq3.jpg"></th>	
@@ -75,9 +84,9 @@
 				      <td>the Bird</td>
 				      <td>@twitter</td>
 				      <td>@twitter</td>
-				      <td>Larry</td>
+				      <td><a href="">Ver</a></td>
 				      <td><md-checkbox></md-checkbox></td>
-				      <td>@twitter</td>
+				      <td><a href="">Ver más</a>/td>
 				    </tr>
 				    <tr>
 				      <td><img src="assets/img/maq1.jpg"></td>
@@ -85,9 +94,9 @@
 				      <td>Otto</td>
 				      <td>@mdo</td>
 				      <td>Otto</td>
-				      <td>Mark</td>
+				      <td><a href="">Ver</a></td>
 				      <td><md-checkbox></md-checkbox></td>
-				      <td>@mdo</td>
+				      <td><a href="">Ver más</a></td>
 				    </tr>
 				    <tr>
 				      <td><img src="assets/img/maq1.jpg"></td>
@@ -95,9 +104,9 @@
 				      <td>Otto</td>
 				      <td>@mdo</td>
 				      <td>Otto</td>
-				      <td>Mark</td>
+				      <td><a href="">Ver</a></td>
 				      <td><md-checkbox></md-checkbox></td>
-				      <td>@mdo</td>
+				      <td><a href="">Ver más</a></td>
 				    </tr>
 				    <tr>
 				      <th><img src="assets/img/maq2.jpg"></th>
@@ -105,9 +114,9 @@
 				      <td>Thornton</td>
 				      <td>@fat</td>
 				      <td>@fat</td>
-				      <td>Jacob</td>
+				      <td><a href="">Ver</a></td>
 				      <td><md-checkbox></md-checkbox></td>
-				      <td>@fat</td>
+				      <td><a href="">Ver más</a></td>
 				    </tr>
 				     <tr>
 				      <th><img src="assets/img/maq3.jpg"></th>	
@@ -115,9 +124,9 @@
 				      <td>the Bird</td>
 				      <td>@twitter</td>
 				      <td>@twitter</td>
-				      <td>Larry</td>
+				      <td><a href="">Ver</a></td>
 				      <td><md-checkbox></md-checkbox></td>
-				      <td>@twitter</td>
+				      <td><a href="">Ver más</a></td>
 				    </tr>
 				     <tr>
 				      <th><img src="assets/img/maq3.jpg"></th>	
@@ -125,9 +134,9 @@
 				      <td>the Bird</td>
 				      <td>@twitter</td>
 				      <td>@twitter</td>
-				      <td>Larry</td>
+				      <td><a href="">Ver</a></td>
 				      <td><md-checkbox></md-checkbox></td>
-				      <td>@twitter</td>
+				      <td><a href="">Ver más</a></td>
 				    </tr>
 				  </tbody>
 				</table>

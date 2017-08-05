@@ -1,5 +1,5 @@
 *{
-    font-family: 'Roboto', sans-serif;
+    
     box-sizing: border-box;
 }
 a{
@@ -32,10 +32,20 @@ app-home{
     background: $fondos;
 }
 app-login{
-    background-image: -webkit-linear-gradient(315deg, transparent 45%,rgba(255,87,34, .4) 45%);
-    @media screen and (max-width:768px){
-      background-image: -webkit-linear-gradient(340deg, transparent 45%,rgba(255,87,34, .3) 45%);
-    }
+	background-image: url('/assets/img/fondo.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	&:before{
+		    content: "";
+			background: rgba(255,255,255, 0.3);
+			position: absolute;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			z-index: 1;
+	}
 }
 
 input:focus{
