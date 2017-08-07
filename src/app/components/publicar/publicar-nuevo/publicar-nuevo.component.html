@@ -1,0 +1,157 @@
+<br>
+<br>
+<form>
+    <div class="row marg-bot">
+        <h3 class="col-12 marg-bot">Tipo de operación</h3>
+        <div class="col-md-4 d-flex align-items-center">
+            <md-select placeholder="¿Desea Vender o Alquilar?">
+              <md-option *ngFor="let tipo of tipos" [value]="tipo">
+                {{ tipo }}
+              </md-option>
+            </md-select>
+        </div>
+        <div class="col-md-4 d-flex align-items-center">
+            <md-select placeholder="¿Seleccione el tipo de maquinaria?">
+              <md-option *ngFor="let tipo of tipos" [value]="tipo">
+                {{ tipo }}
+              </md-option>
+            </md-select>
+        </div>
+    </div>
+
+    <div class="row marg-bot">
+        <h3 class="col-12 marg-bot">Ubicación de maquinaria</h3>
+        <div class="col-md-4 d-flex align-items-center">
+            <md-select placeholder="Seleccione el departamento">
+              <md-option *ngFor="let tipo of tipos" [value]="tipo">
+                {{ tipo }}
+              </md-option>
+            </md-select>
+        </div>
+        <div class="col-md-4 d-flex align-items-center">
+            <md-select placeholder="Seleccione la provincia">
+              <md-option *ngFor="let tipo of tipos" [value]="tipo">
+                {{ tipo }}
+              </md-option>
+            </md-select>
+        </div>
+        <div class="col-md-4 d-flex align-items-center">
+            <md-select placeholder="Seleccione el distrito">
+              <md-option *ngFor="let tipo of tipos" [value]="tipo">
+                {{ tipo }}
+              </md-option>
+            </md-select>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <h3 class="col-md-4">Ubicar en el mapa(presione el botón)</h3>
+    </div>
+
+    <div class="row">
+        <h3 class="col-12">Sube tus fotos</h3>
+        
+    </div>
+
+    <div class="row">
+        <h3 class="col-12">Precio</h3>
+        <div class="col-md-4 check-container">
+            <md-checkbox>A consultar</md-checkbox>
+        </div>
+        <div class="col-md-2 tipo-alquiler-container">
+            <h5>Tipo de alquiler*</h5>
+            <md-radio-group>
+              <md-radio-button value="1">Por hora</md-radio-button>
+              <md-radio-button value="2">Por día</md-radio-button>
+              <md-radio-button value="3">Por semana</md-radio-button>
+            </md-radio-group>
+        </div>
+        <div class="col-md-2 moneda-container">
+            <h5>Moneda*</h5>
+            <md-radio-group>
+                <md-radio-button value="1">US$</md-radio-button>
+                <md-radio-button value="2">S/</md-radio-button>
+            </md-radio-group>
+        </div>
+        <div class="col-md-4">
+            <md-input-container>
+              <input mdInput placeholder="Precio">
+            </md-input-container>
+        </div>
+    </div>
+
+    <div class="row">
+        <h3 class="col-12">Datos de la Maquinaria</h3>
+        <div class="col-md-4 d-flex align-items-center">
+             <md-select placeholder="Seleccione condicion">
+              <md-option *ngFor="let tipo of tipos" [value]="tipo">
+                {{ tipo }}
+              </md-option>
+            </md-select>
+        </div>
+        <div class="col-md-4">
+             <md-input-container>
+              <input required mdInput placeholder="Ingrese la marca">
+            </md-input-container>
+        </div>
+        <div class="col-md-4">
+             <md-input-container>
+              <input required mdInput placeholder="Ingrese el modelo">
+            </md-input-container>
+        </div>
+        <div class="col-md-4">
+            <md-input-container>
+              <input required mdInput placeholder="Ingrese el año">
+            </md-input-container>
+        </div>
+        <div class="col-md-4">
+            <md-input-container>
+              <input  mdInput placeholder="Horas/maquina">
+            </md-input-container>
+        </div>
+        <div class="col-md-7">
+            <md-input-container>
+              <input  mdInput placeholder="Descripcion">
+            </md-input-container>
+        </div>
+    </div>
+
+    <div class="row">
+        <h3 class="col-12">Datos de Contacto</h3>
+        <div class="col-md-4">
+            <md-input-container>
+              <input  mdInput placeholder="Nombre">
+            </md-input-container>
+        </div>
+        <div class="col-md-4">
+            <md-input-container>
+              <input  mdInput placeholder="Apellidos">
+            </md-input-container>
+        </div>
+        <div class="col-md-4">
+            <md-input-container>
+              <input required mdInput placeholder="Telefono 1">
+            </md-input-container>
+        </div>
+        <div class="col-md-4">
+            <md-input-container>
+              <input  mdInput placeholder="Telefono 2">
+            </md-input-container>
+        </div>
+        <div class="col-md-8">
+            <md-input-container>
+              <input  required mdInput placeholder="Correo electronico">
+            </md-input-container>
+        </div>
+        <div class="col-md-4">
+            <md-input-container>
+              <input  mdInput placeholder="Horario de atención">
+            </md-input-container>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-5">
+            <button class="btn-publicar btn-block">Publicar</button>
+        </div>
+    </div>
+</form>

@@ -15,6 +15,9 @@ import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { PublicacionesComponent } from './components/publicaciones/publicaciones.component';
 import { EstadisticaComponent } from './components/estadistica/estadistica.component';
+import { PublicarComponent } from './components/publicar/publicar.component';
+import { PublicarNuevoComponent } from './components/publicar/publicar-nuevo/publicar-nuevo.component';
+import { PublicarEditarComponent } from './components/publicar/publicar-editar/publicar-editar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { EstadisticaComponent } from './components/estadistica/estadistica.compo
     HomeComponent,
     NavComponent,
     PublicacionesComponent,
-    EstadisticaComponent
+    EstadisticaComponent,
+    PublicarComponent,
+    PublicarNuevoComponent,
+    PublicarEditarComponent
   ],
   imports: [
     BrowserModule,

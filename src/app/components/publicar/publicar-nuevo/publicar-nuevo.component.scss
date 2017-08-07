@@ -1,0 +1,36 @@
+@import "../../../../styles";
+form{
+    padding-bottom:30px;
+    .marg-bot{
+        margin-bottom: 25px;
+    }
+    .check-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .tipo-alquiler-container,.moneda-container{
+        md-radio-group{
+            display: flex !important;
+            flex-direction: column !important;
+        }
+    }
+    .btn-publicar{
+        background:$accent-color;
+        color:white;
+        font-weight: bold;
+        padding-top:10px;
+        padding-bottom:10px;
+        border:none;
+        font-size: 20px;
+        outline: none;
+        border-radius:7px;
+        cursor: pointer;
+        box-shadow:$border-shadow-bread;
+        &:hover{
+            box-shadow:$border-shadow-hover;
+        }
+    }
+}
+

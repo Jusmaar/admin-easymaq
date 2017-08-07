@@ -67,6 +67,10 @@ $color-easymaq: #FF5722;
 		color: $color-easymaq !important;
 	}
 }
+md-input-container{
+	width:100% !important;
+}
+
 .mat-input-placeholder{
 	&.mat-focused{
 		color: $color-easymaq !important;
