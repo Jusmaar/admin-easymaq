@@ -1,0 +1,16 @@
+<div class="col-12">
+   <md-input-container>
+      <input mdInput placeholder="Ejem: Av. Javier Prado 2922">
+   </md-input-container>
+</div>
+<agm-map 
+    [latitude]="lat" 
+    [longitude]="lng" 
+    [zoom]="zoom"
+    (mapClick)="clickMapa($event)">
+   <agm-marker *ngFor="let marcador of _ms.marcadores"
+      [latitude]="marcador.lat" 
+      [longitude]="marcador.lng"
+      [markerDraggable]="marcador.draggable">
+    </agm-marker> 
+</agm-map>

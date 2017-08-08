@@ -6,8 +6,11 @@ import { MdInputModule } from '@angular/material';
 import {MdCheckboxModule} from '@angular/material';
 import {MdRadioModule} from '@angular/material';
 import { ChartsModule } from 'ng2-charts';
+import { AgmCoreModule } from '@agm/core';
 
 import {APP_ROUTING} from './app.routes';
+
+import { MapaService } from './services/mapa.service';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -18,6 +21,7 @@ import { EstadisticaComponent } from './components/estadistica/estadistica.compo
 import { PublicarComponent } from './components/publicar/publicar.component';
 import { PublicarNuevoComponent } from './components/publicar/publicar-nuevo/publicar-nuevo.component';
 import { PublicarEditarComponent } from './components/publicar/publicar-editar/publicar-editar.component';
+import { MapaComponent } from './components/mapa/mapa.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,8 @@ import { PublicarEditarComponent } from './components/publicar/publicar-editar/p
     EstadisticaComponent,
     PublicarComponent,
     PublicarNuevoComponent,
-    PublicarEditarComponent
+    PublicarEditarComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +44,12 @@ import { PublicarEditarComponent } from './components/publicar/publicar-editar/p
     MdSelectModule,
     MdCheckboxModule,
     MdRadioModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBgPba9ENKjx2AD7IOG2SIFN3x5WYAKqo4'
+    }),
     APP_ROUTING
   ],
-  providers: [],
+  providers: [MapaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

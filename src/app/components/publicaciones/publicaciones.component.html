@@ -6,8 +6,8 @@
 				<h1>Gestiona tus publicaciones</h1>
 			</div>
 			<div class="col-2 d-flex justify-content-end">
-				<button class="btn-plus" type="button"><i class="fa fa-plus"></i>
-</button>
+				<button [routerLink]="['/publicar/nuevo']" class="btn-plus" type="button"><i class="fa fa-plus"></i>
+					</button>
 			</div>
 		</div>
 		
@@ -52,7 +52,8 @@
 				      <th>Categoria</th>
 				      <th>Fecha publicacion</th>
 				      <th>Tipo</th>
-				      <th>Estadisticas</th>
+							<th>Estadisticas</th>
+							<th>Editar</th>
 				      <th>Activo</th>
 				      <th>Detalles</th>
 				    </tr>
@@ -64,7 +65,8 @@
 				      <td>Otto</td>
 				      <td>@mdo</td>
 				      <td>Otto</td>
-				      <td><a href="">Ver</a></td>
+							<td><a [routerLink]="['/estadistica']">Ver</a></td>
+							<td><a [routerLink]="['/publicar/editar']"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
 				      <td><md-checkbox></md-checkbox></td>
 				      <td><a href="">Ver más</a></td>
 				    </tr>
@@ -74,7 +76,8 @@
 				      <td>Thornton</td>
 				      <td>@fat</td>
 				      <td>@fat</td>
-				      <td><a href="">Ver</a></td>
+							<td><a href="">Ver</a></td>
+							<td><a href=""><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
 				      <td><md-checkbox></md-checkbox></td>
 				      <td><a href="">Ver más</a></td>
 				    </tr>
@@ -84,17 +87,8 @@
 				      <td>the Bird</td>
 				      <td>@twitter</td>
 				      <td>@twitter</td>
-				      <td><a href="">Ver</a></td>
-				      <td><md-checkbox></md-checkbox></td>
-				      <td><a href="">Ver más</a>/td>
-				    </tr>
-				    <tr>
-				      <td><img src="assets/img/maq1.jpg"></td>
-				      <td>Mark</td>
-				      <td>Otto</td>
-				      <td>@mdo</td>
-				      <td>Otto</td>
-				      <td><a href="">Ver</a></td>
+							<td><a href="">Ver</a></td>
+							<td><a href=""><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
 				      <td><md-checkbox></md-checkbox></td>
 				      <td><a href="">Ver más</a></td>
 				    </tr>
@@ -104,7 +98,19 @@
 				      <td>Otto</td>
 				      <td>@mdo</td>
 				      <td>Otto</td>
-				      <td><a href="">Ver</a></td>
+							<td><a href="">Ver</a></td>
+							<td><a href=""><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+				      <td><md-checkbox></md-checkbox></td>
+				      <td><a href="">Ver más</a></td>
+				    </tr>
+				    <tr>
+				      <td><img src="assets/img/maq1.jpg"></td>
+				      <td>Mark</td>
+				      <td>Otto</td>
+				      <td>@mdo</td>
+				      <td>Otto</td>
+							<td><a href="">Ver</a></td>
+							<td><a href=""><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
 				      <td><md-checkbox></md-checkbox></td>
 				      <td><a href="">Ver más</a></td>
 				    </tr>
@@ -114,7 +120,8 @@
 				      <td>Thornton</td>
 				      <td>@fat</td>
 				      <td>@fat</td>
-				      <td><a href="">Ver</a></td>
+							<td><a href="">Ver</a></td>
+							<td><a href=""><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
 				      <td><md-checkbox></md-checkbox></td>
 				      <td><a href="">Ver más</a></td>
 				    </tr>
@@ -124,7 +131,8 @@
 				      <td>the Bird</td>
 				      <td>@twitter</td>
 				      <td>@twitter</td>
-				      <td><a href="">Ver</a></td>
+							<td><a href="">Ver</a></td>
+							<td><a href=""><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
 				      <td><md-checkbox></md-checkbox></td>
 				      <td><a href="">Ver más</a></td>
 				    </tr>
@@ -134,7 +142,8 @@
 				      <td>the Bird</td>
 				      <td>@twitter</td>
 				      <td>@twitter</td>
-				      <td><a href="">Ver</a></td>
+							<td><a href="">Ver</a></td>
+							<td><a href=""><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
 				      <td><md-checkbox></md-checkbox></td>
 				      <td><a href="">Ver más</a></td>
 				    </tr>
