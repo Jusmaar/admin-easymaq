@@ -1,6 +1,6 @@
 import { Directive, EventEmitter, ElementRef, HostListener, Input, Output } from '@angular/core';
 import { FileItem } from "../models/file-item";
-
+import { UtilsService } from "../services/utils.service";
 
 @Directive({
   selector: '[NgDropFiles]'
@@ -10,7 +10,7 @@ export class NgDropFilesDirective {
   @Input() archivos:FileItem[] =[];
   @Output() archivosSobre: EventEmitter<any> = new EventEmitter(); 
 
-  constructor(public elemento: ElementRef) {
+  constructor(public elemento: ElementRef, private _utilsService:UtilsService) {
       console.log("onchange event");
   }
 
@@ -57,10 +57,12 @@ export class NgDropFilesDirective {
         return;
     }
     this.archivos =[];
+     console.log(this.archivos);
     this._agregarArchivos(event.target.files);
     this.archivosSobre.emit( false );
     console.log("this.cargarImagenesFirebase();");
     this._prevenirYdetener(event);
+    console.log(this.archivos);
   }
   
   private _getTransferencia( event:any ){
@@ -72,8 +74,18 @@ export class NgDropFilesDirective {
     for( let propiedad in Object.getOwnPropertyNames( archivosLista )){
       let archTemporal = archivosLista[propiedad];
       if(this._archivoPuedeSerCargado( archTemporal )){
-        let nuevoArchivo = new FileItem( archTemporal );
-        this.archivos.push( nuevoArchivo );
+
+    /******************************************** */
+        let jusmar= this._utilsService._getFile64(archTemporal);
+        
+        jusmar.then(res => {
+            let nuevoArchivo = new FileItem( archTemporal , res);
+            this.archivos.push( nuevoArchivo );
+        }).catch(error => {
+            console.log(error);
+        });
+
+    /******************************************** */
       }
     }
     console.log(this.archivos);

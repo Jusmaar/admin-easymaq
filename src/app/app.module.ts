@@ -11,7 +11,8 @@ import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
 import {APP_ROUTING} from './app.routes';
 
 import { MapaService } from './services/mapa.service';
-
+import { UtilsService } from './services/utils.service';
+ 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
@@ -54,7 +55,7 @@ import { MapaComponent } from './components/mapa/mapa.component';
     }),
     APP_ROUTING
   ],
-  providers: [MapaService],
+  providers: [MapaService,UtilsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
