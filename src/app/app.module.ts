@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdSelectModule} from '@angular/material';
-import { MdInputModule } from '@angular/material';
-import {MdCheckboxModule} from '@angular/material';
-import {MdRadioModule} from '@angular/material';
+import {MdSelectModule,MdInputModule,MdCheckboxModule,MdRadioModule} from '@angular/material';
 import { ChartsModule } from 'ng2-charts';
 import { AgmCoreModule } from '@agm/core';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+
+import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
 
 import {APP_ROUTING} from './app.routes';
 
@@ -23,6 +23,7 @@ import { PublicarNuevoComponent } from './components/publicar/publicar-nuevo/pub
 import { PublicarEditarComponent } from './components/publicar/publicar-editar/publicar-editar.component';
 import { MapaComponent } from './components/mapa/mapa.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,7 @@ import { MapaComponent } from './components/mapa/mapa.component';
     PublicarComponent,
     PublicarNuevoComponent,
     PublicarEditarComponent,
+    NgDropFilesDirective,
     MapaComponent
   ],
   imports: [
@@ -44,8 +46,11 @@ import { MapaComponent } from './components/mapa/mapa.component';
     MdSelectModule,
     MdCheckboxModule,
     MdRadioModule,
+    FormsModule,
+    ReactiveFormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBgPba9ENKjx2AD7IOG2SIFN3x5WYAKqo4'
+      apiKey: 'AIzaSyBgPba9ENKjx2AD7IOG2SIFN3x5WYAKqo4',
+      libraries: ["places"]
     }),
     APP_ROUTING
   ],

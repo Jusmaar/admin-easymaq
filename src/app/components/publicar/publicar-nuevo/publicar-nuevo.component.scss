@@ -42,6 +42,9 @@ form{
             height: 100px;
             background-size: contain;
             margin: auto;
+            &.boxdrop {
+                background-image: url("../../../../assets/img/cloudcolor.png");
+            }
         }
         
         .span{
