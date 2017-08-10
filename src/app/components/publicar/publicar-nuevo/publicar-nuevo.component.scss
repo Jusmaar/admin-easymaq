@@ -139,6 +139,32 @@ form{
             display: none;
         }
     }
-    
+    .upload_img{
+        li{
+            list-style: none;
+            position: relative;
+            height: 155px;
+            .img-fluid{
+                height: 100%;
+            }
+            .img-close{
+                cursor:pointer;
+                position: absolute;
+                top:-15px;
+                right: 0;
+                background: $fondos;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $secondary-text-color;
+                box-shadow: $border-shadow-bread;
+                i{
+                    padding:5px 5px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
 }
 

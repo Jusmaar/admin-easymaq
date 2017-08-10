@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { AdminService } from '../../services/admin.service';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +7,6 @@ import { Component} from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
-
     public lineChartData:Array<any> = [
     {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
     {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'},

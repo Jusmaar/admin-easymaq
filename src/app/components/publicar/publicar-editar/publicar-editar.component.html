@@ -1,6 +1,6 @@
 <br>
 <br>
-<form>
+<form #forma="ngForm">
     <div class="row marg-bot">
         <h3 class="col-12 marg-bot">Tipo de operación</h3>
         <div class="col-md-4 d-flex align-items-center">
@@ -47,13 +47,13 @@
     <div class="row d-flex justify-content-center">
         <h3 class="col-md-7 text-center">Ubicar en el mapa</h3>
         <div class="col-md-12">
-            <app-mapa></app-mapa>
+            <app-mapa (pasaBtndireccion)="showBtnDireccion($event)"></app-mapa>
         </div>
     </div>
 
-    <div class="row d-flex justify-content-center">
+    <div class="row d-flex justify-content-center marg-bot">
         <h3 class="col-12">Sube tus fotos</h3>
-        <div class="col-md-11 dashed hidden-xs-down">
+        <div NgDropFiles class="col-md-11 dashed hidden-xs-down">
           <div class="row d-flex justify-content-center">
             <div class="col-md-3 text-center">
                 <div class="cloud"></div>
@@ -61,7 +61,7 @@
                 <div class="span">ó</div>
                 <div class="btn-subir-imgs">
                     <label for="inp-file">Subir imágenes</label>
-                    <input type="file" id="inp-file" accept="image">
+                    <input NgDropFiles multiple (archivosImg)="archivosImagenes($event)" type="file" id="inp-file" accept="image/*">
                 </div>
             </div>
           </div>
@@ -70,6 +70,8 @@
             <div class="row hidden-sm-up">
                 <div class="col-4">
                     <div class="image-container">
+                        <label for="inp-file"></label>
+                        <input NgDropFiles  multiple type="file" id="inp-file" accept="image/*">
                         <i class="fa fa-picture-o ico-image"></i>
                         <i class="fa fa-plus ico-plus"></i>
                     </div>
@@ -83,7 +85,12 @@
             </div>
         </div>
     </div>
-
+        <ul class="upload_img row">
+            <li *ngFor="let image of archivos; let i = index" class="col-4 col-md-2">
+                <img [src]="image.base64file" class="img-fluid" name="file">
+                <div class="img-close" (click)="deleteimage(i)"><i class="fa fa-times" aria-hidden="true"></i></div>
+            </li>
+        </ul>
     <div class="row">
         <h3 class="col-12">Precio</h3>
         <div class="col-md-4 check-container">

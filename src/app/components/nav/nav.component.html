@@ -13,8 +13,8 @@
                 <li routerLinkActive="active">
                   <a [routerLink]="['/perfil']"><i class="fa fa-user fa-lg"></i> Perfil</a>
                 </li>
-                <li routerLinkActive="active">
-                  <a href="#"><i class="fa fa-sign-out" ></i>Cerrar sesion</a>
+                <li routerLinkActive="active" [routerLink]="['/login']" (click)="logout()">
+                  <a ><i class="fa fa-sign-out"  ></i>Cerrar sesion</a>
                 </li>
             </ul>
      </div>

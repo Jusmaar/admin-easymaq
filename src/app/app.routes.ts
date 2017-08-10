@@ -5,10 +5,13 @@ import { PublicacionesComponent } from './components/publicaciones/publicaciones
 import { EstadisticaComponent } from './components/estadistica/estadistica.component';
 import { PublicarComponent } from './components/publicar/publicar.component';
 import { PUBLICAR_ROUTES } from './components/publicar/publicar.routes';
+import { LoginGuard } from './services/login.guard.service';
 
 
 const APP_ROUTES:Routes = [
-    { path:'login', component: LoginComponent },
+    { path:'login', component: LoginComponent,
+        canActivate: [LoginGuard]
+    },
     { path:'home', component : HomeComponent },
     { path:'publicaciones', component : PublicacionesComponent },
     { 

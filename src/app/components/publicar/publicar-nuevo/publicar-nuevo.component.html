@@ -51,7 +51,7 @@
         </div>
     </div>
 
-    <div class="row d-flex justify-content-center">
+    <div class="row d-flex justify-content-center marg-bot">
         <h3 class="col-12">Sube tus fotos</h3>
         <div NgDropFiles class="col-md-11 dashed hidden-xs-down">
           <div class="row d-flex justify-content-center">
@@ -61,7 +61,7 @@
                 <div class="span">ó</div>
                 <div class="btn-subir-imgs">
                     <label for="inp-file">Subir imágenes</label>
-                    <input NgDropFiles multiple  type="file" id="inp-file" accept="image/*">
+                    <input NgDropFiles multiple (archivosImg)="archivosImagenes($event)" type="file" id="inp-file" accept="image/*">
                 </div>
             </div>
           </div>
@@ -71,7 +71,7 @@
                 <div class="col-4">
                     <div class="image-container">
                         <label for="inp-file"></label>
-                        <input NgDropFiles multiple type="file" id="inp-file" accept="image/*">
+                        <input NgDropFiles  multiple type="file" id="inp-file" accept="image/*">
                         <i class="fa fa-picture-o ico-image"></i>
                         <i class="fa fa-plus ico-plus"></i>
                     </div>
@@ -83,15 +83,14 @@
                     <small>Tamaño de imagen de referencia(800x600px)</small>
                 </div>
             </div>
-            <!-- <ul class="cnt-upload_img">
-                <li *ngFor="let image of _cargaImagenes.listPreview; let i = index">
-                    <img [src]="image" name="file">
-                    <div class="close_file" (click)="deleteimage(i)"></div>
-                </li>
-            </ul> -->
         </div>
     </div>
-
+        <ul class="upload_img row">
+            <li *ngFor="let image of archivos; let i = index" class="col-4 col-md-2">
+                <img [src]="image.base64file" class="img-fluid" name="file">
+                <div class="img-close" (click)="deleteimage(i)"><i class="fa fa-times" aria-hidden="true"></i></div>
+            </li>
+        </ul>
     <div class="row">
         <h3 class="col-12">Precio</h3>
         <div class="col-md-4 check-container">
